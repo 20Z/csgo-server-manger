@@ -6,7 +6,7 @@ import random
 
 # === Configuration (replace these with your own secure settings) ===
 TOKEN = "TOKEN_HERE"  # Replace with your actual token or load via environment variable
-RCON_HOST = "192.168.1.1"
+RCON_HOST = "192.168.1.1" # Replace with Your CSGO server IP 
 RCON_PORT = 30116  # Your server's RCON port / RCON port is usually 27016,27016 / IN FSHOST IS  30116
 RCON_PASSWORD = "123456" # Your server's RCON Paswword
 ALLOWED_ROLE_ID = 123456789  # Your Discord Role ID / Only users with this role may use management commands
@@ -199,6 +199,8 @@ async def freezetime(ctx, seconds: int):
     try:
         with MCRcon(RCON_HOST, RCON_PASSWORD, port=RCON_PORT) as mcr:
             result = mcr.command(f"mp_freezetime {seconds}")
+            mcr.command(f"say Done Freeze time {seconds}")
+
         await ctx.send(f"❄️ Freeze time set to **{seconds}** seconds.\n✅ Response: `{result}`")
     except Exception as e:
         await ctx.send(f"❌ Failed to set freeze time: {e}")
