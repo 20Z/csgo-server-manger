@@ -60,7 +60,7 @@ python CSGO_SERVER_MANGER.py
   - Check for typos in commands or required parameters.
 
 ## 🏆 Recommended Server Hosting
-If you need a high-quality CS:GO server, check out [FSHOT](https://fshost.me/)!
+If you need a high-quality CS:GO server, check out [FSHOST](https://fshost.me/)!
 They offer reliable and affordable hosting solutions for CS:GO and other games.
 ##
 Made with ❤️ by [SALBEH](https://salbeh.pw)
